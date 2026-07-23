@@ -1,0 +1,21 @@
+services:
+  toolbox:
+    image: ghcr.io/gabrielkheisa-ca/gcp-devops-toolbox:1.0
+    container_name: devops-workspace
+    restart: unless-stopped
+    volumes:
+      - .:/workspace
+      - gcloud-config:/root/.config/gcloud
+      - gh-config:/root/.config/gh
+      - kube-config:/root/.kube
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ~/.ssh:/root/.ssh:ro
+    tty: true
+    stdin_open: true
+    environment:
+      - TF_IN_AUTOMATION=true
+
+volumes:
+  gcloud-config:
+  gh-config:
+  kube-config:
