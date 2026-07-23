@@ -1,0 +1,79 @@
+# Terraform & OpenTofu
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+.terraform.lock.hcl.tmp
+
+# Cloud SDK & CLI configuration / credentials
+.config/
+gcloud/
+adc.json
+*application_default_credentials.json
+*.json
+!package.json
+!composer.json
+!tsconfig.json
+
+# Kubernetes & Helm
+.kube/
+kubeconfig
+*.kubeconfig
+helm/repository/
+helm/cache/
+
+# Docker & Container Artifacts
+.docker/
+*.tar
+*.tar.gz
+
+# Secrets, Passwords, Keys & Envs
+*.env
+*.env.*
+!.env.example
+*.pem
+*.key
+*.pub
+*.crt
+id_rsa
+id_rsa.pub
+id_ed25519
+id_ed25519.pub
+secrets/
+*.secret
+
+# IDEs & Editors
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.sublime-project
+*.sublime-workspace
+.project
+.settings/
+
+# Operating System & Temp files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*~
+*.swp
+*.swo
+tmp/
+temp/
+logs/
+*.log
