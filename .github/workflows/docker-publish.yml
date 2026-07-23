@@ -11,6 +11,7 @@ jobs:
     permissions:
       contents: read
       packages: write
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -44,3 +45,6 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: ${{ steps.meta.outputs.tags }}
+          # --- Layer Caching Options ---
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
