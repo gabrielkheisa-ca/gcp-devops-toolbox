@@ -1,0 +1,42 @@
+# Git files and history
+.git
+.gitignore
+.github
+
+# Docker build output / docs / compose
+docker-compose.yml
+README.md
+LICENSE
+
+# Local credentials and secrets
+*.env
+*.env.*
+*.pem
+*.key
+*.pub
+id_rsa
+id_ed25519
+secrets/
+
+# Terraform / OpenTofu state & cache
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+
+# Kubernetes local configs
+.kube/
+kubeconfig
+
+# Cloud SDK credentials / configuration
+.config/
+gcloud/
+adc.json
+*application_default_credentials.json
+
+# Logs, Temp, and OS artifacts
+*.log
+tmp/
+temp/
+.DS_Store
+Thumbs.db
